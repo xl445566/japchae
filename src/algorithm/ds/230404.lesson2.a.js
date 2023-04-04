@@ -4,16 +4,19 @@
 // Code
 
 function solution(A, K) {
-  const numbers = A.slice();
-    const set = new Set();
+  if (A.length === K || K === 0) {
+      return A;
+  }
 
-    numbers.forEach(v => {
-        if (!set.has(v)) {
-            set.add(v);
-        } else {
-            set.delete(v);
-        }
-    });
+  let results = A.slice();
+  let step = K;
 
-    return Array.from(set)[0];
+  while (step) {
+      const n = results.splice(results.length - 1, 1);
+      results = [...n, ...results];
+      step--;
+  }
+
+
+  return results;
 }

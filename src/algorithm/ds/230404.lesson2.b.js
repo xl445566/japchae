@@ -4,4 +4,17 @@
 // Type: Array
 // Code
 
+function solution(A) {
+  const numbers = A.slice();
+  const set = new Set();
 
+  numbers.forEach(v => {
+      if (!set.has(v)) {
+          set.add(v);
+      } else {
+          set.delete(v);
+      }
+  });
+
+  return Array.from(set)[0];
+}
