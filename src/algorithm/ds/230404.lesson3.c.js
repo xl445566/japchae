@@ -21,7 +21,6 @@ function solution(A) {
       left += numbers[i];
       right -= numbers[i];
   }
-  
 
   return result;
 }
