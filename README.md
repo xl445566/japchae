@@ -17,8 +17,6 @@ function main(arr) {
 }
 ```
 
-<hr/>
-
 ### **til** 하위 본인의 디렉토리에 <제목>.js 형식으로 작성
 
 - 파일이름 예시: mysql.html
